@@ -38,6 +38,8 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 set showtabline=2
+set ignorecase
+set smartcase
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 " let Tlist_Auto_Open = 1

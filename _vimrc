@@ -41,9 +41,29 @@ set showtabline=2
 set ignorecase
 set smartcase
 
-nnoremap <silent> <F8> :TlistToggle<CR>
-" let Tlist_Auto_Open = 1
-let Tlist_Close_On_Select = 1
+"Set windows size
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
 
+"Configure tag list
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window   = 1
+let Tlist_WinWidth = 40
+
+"Configure NERDTree
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeWinSize=40
+autocmd VimEnter * NERDTree

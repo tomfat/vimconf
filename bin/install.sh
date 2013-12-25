@@ -16,6 +16,7 @@ mkdir "$BUNDLE_DIR"
 
 echo "----Copy .vimrc"
 cp $ROOT_DIR/_vimrc $HOME_DIR/.vimrc -b
+dos2unix $HOME_DIR/.vimrc
 
 #Install plugins
 #Switch to .vim dir
@@ -25,7 +26,7 @@ echo "----Install pathogen"
 #pathogen is plugin used to manage other plugin in a neat way
 git clone git://github.com/tpope/vim-pathogen.git pathogen
 echo "----Copy pathogen"
-cp "pathogen/autoload/*" "$VIM_DIR/autoload"
+cp pathogen/autoload/* $AUTOLOAD_DIR
 
 # all other plugin will be installed under bundle folder.
 

@@ -1,7 +1,3 @@
-"Init pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -31,6 +27,10 @@ function MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
+
+"Init pathogen
+call pathogen#infect()
+call pathogen#helptags()
 
 colorscheme desert
 

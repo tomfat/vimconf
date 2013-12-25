@@ -1,3 +1,7 @@
+"Init pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -67,3 +71,9 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeWinSize=40
 autocmd VimEnter * NERDTree
+
+"Configure DelimitMate
+let delimitMate_autoclose = 1
+let delimitMate_matchpairs = "(:),[:],{:},<:>"
+let delimitMate_expand_space = 0
+let delimitMate_quotes = "\" ' ` *"

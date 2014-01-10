@@ -47,3 +47,6 @@ git clone git://github.com/vim-scripts/taglist.vim.git targlist
 
 echo "----Install jsbeatify"
 git clone git://github.com/maksimr/vim-jsbeautify.git jsbeautify
+cd jsbeautify
+git submodule update --init --recursive
+cd ..

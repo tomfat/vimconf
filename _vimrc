@@ -81,3 +81,10 @@ let delimitMate_autoclose = 1
 let delimitMate_matchpairs = "(:),[:],{:},<:>"
 let delimitMate_expand_space = 0
 let delimitMate_quotes = "\" ' ` *"
+
+"Configure Js beautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>

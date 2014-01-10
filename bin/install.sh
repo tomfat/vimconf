@@ -45,4 +45,3 @@ git clone git://github.com/scrooloose/nerdtree.git nerdtree
 echo "----Install taglist"
 git clone git://github.com/vim-scripts/taglist.vim.git targlist
 
-

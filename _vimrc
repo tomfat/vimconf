@@ -44,6 +44,10 @@ let g:miniBufExplModSelTarget = 1
 set showtabline=2
 set ignorecase
 set smartcase
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "Set windows size
 if has("gui_running")

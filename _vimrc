@@ -50,12 +50,24 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 set showtabline=2
+
+"Set search ignore case
 set ignorecase
 set smartcase
+
+"Set indent
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+"Set font for gvim
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 
 "Set windows size
 if has("gui_running")
@@ -63,6 +75,10 @@ if has("gui_running")
   " Maximize gvim window.
   set lines=999 columns=999
 endif
+
+"----------------------------
+"Configure plug-ins
+"----------------------------
 
 "Configure tag list
 "nnoremap <silent> <F8> :TlistToggle<CR>

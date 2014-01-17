@@ -85,6 +85,10 @@ let delimitMate_quotes = "\" ' ` *"
 "Configure Js beautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html  noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType css  noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"Configure Close Tag
+autocmd FileType html, htmldjango, jinjahtml, eruby, mako let b:closetag_html_style=1
+autocmd FileType html, xhtml, xml, htmldjango, jinjahtml, eruby, mako source ~/.vim/bundle/closetag/plugin/closetag.vim

@@ -37,7 +37,13 @@ echo "----Install jsbeautify"
 git submodule add git://github.com/maksimr/vim-jsbeautify.git jsbeautify
 
 echo "----Instal solorized color"
-git submodule add  git://github.com/altercation/vim-colors-solarized.git bundle/solarized
+git submodule add  git://github.com/altercation/vim-colors-solarized.git solarized
+
+echo "----Instal close tag"
+git submodule add git://github.com/docunext/closetag.vim.git closetag
+
+echo "----Instal supertab"
+git submodule add git://github.com/ervandew/supertab.git supertab
 
 REM return to ROOT_DIR
 popd

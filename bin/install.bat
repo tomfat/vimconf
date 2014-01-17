@@ -45,6 +45,15 @@ git submodule add git://github.com/docunext/closetag.vim.git closetag
 echo "----Instal supertab"
 git submodule add git://github.com/ervandew/supertab.git supertab
 
+echo "----Instal tagbar"
+git submodule add git://github.com/majutsushi/tagbar.git tagbar
+
+echo "----Instal nerdcommenter"
+git submodule add git://github.com/scrooloose/nerdcommenter.git nerdcommenter
+
+echo "----Instal pyflakes"
+git submodule add git://github.com/kevinw/pyflakes-vim.git pyflakes
+
 REM return to ROOT_DIR
 popd
 git submodule update --init --recursive

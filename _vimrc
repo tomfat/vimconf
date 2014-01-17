@@ -65,10 +65,10 @@ if has("gui_running")
 endif
 
 "Configure tag list
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window   = 1
-let Tlist_WinWidth = 40
+"nnoremap <silent> <F8> :TlistToggle<CR>
+"let Tlist_Close_On_Select = 1
+"let Tlist_Use_Right_Window   = 1
+"let Tlist_WinWidth = 40
 
 "Configure NERDTree
 map <F2> :NERDTreeToggle<CR>
@@ -92,3 +92,10 @@ autocmd FileType css  noremap <buffer> <c-f> :call CSSBeautify()<cr>
 "Configure Close Tag
 autocmd FileType html, htmldjango, jinjahtml, eruby, mako let b:closetag_html_style=1
 autocmd FileType html, xhtml, xml, htmldjango, jinjahtml, eruby, mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+"Configure tagbar
+let g:tagbar_usearrows = 1
+nnoremap <silent> <F12> :TagbarToggle<CR>
+
+"Configure nerdcommenter
+

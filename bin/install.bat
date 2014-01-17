@@ -36,6 +36,9 @@ git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
 echo "----Install jsbeautify"
 git submodule add git://github.com/maksimr/vim-jsbeautify.git jsbeautify
 
+echo "----Instal solorized color"
+git submodule add  git://github.com/altercation/vim-colors-solarized.git bundle/solarized
+
 REM return to ROOT_DIR
 popd
 git submodule update --init --recursive

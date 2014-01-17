@@ -16,3 +16,6 @@
 [submodule "bundle/jsbeautify"]
 	path = bundle/jsbeautify
 	url = git://github.com/maksimr/vim-jsbeautify.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

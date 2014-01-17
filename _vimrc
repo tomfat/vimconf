@@ -32,7 +32,7 @@ endfunction
 call pathogen#infect()
 call pathogen#helptags()
 
-#colorscheme desert
+"colorscheme desert
 set background=dark
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256

@@ -15,12 +15,10 @@ mkdir "$AUTOLOAD_DIR"
 mkdir "$BUNDLE_DIR"
 
 echo "----Copy .vimrc"
-cp $ROOT_DIR/_vimrc $ROOT_DIR/.vimrc -b
+cp $ROOT_DIR/_vimrc $ROOT_DIR/.vimrc -f
 dos2unix $ROOT_DIR/.vimrc
 
 #Install plugins
-#Switch to .vim dir
-cd "$VIM_DIR"
 
 echo "----Install pathogen"
 #pathogen is plugin used to manage other plugin in a neat way
@@ -43,18 +41,17 @@ git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
 
 echo "----Install jsbeatify"
 git submodule add git://github.com/maksimr/vim-jsbeautify.git jsbeautify
-cd jsbeautify
 
 cd $ROOT_DIR
 git submodule update --init --recursive
 
 #Creat links
 cd $HOME_DIR
-ln -s $ROOT_DIR/.vimrc .vimrc 
+ln -s -T $ROOT_DIR/.vimrc .vimrc -f
 
 cd $VIM_DIR
-ln -s $ROOT_DIR/bundle bundle
+ln -s -T $ROOT_DIR/bundle bundle -f
 
 cd $AUTOLOAD_DIR
-ln -s $ROOT_DIR/pathogen/autoload/pathogen.vim pathogen.vim
+ln -s -T $ROOT_DIR/pathogen/autoload/pathogen.vim pathogen.vim -f
 

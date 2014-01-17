@@ -36,11 +36,29 @@ git submodule add git://github.com/vim-scripts/desert.vim.git desert
 echo "----Install nerdtree"
 git submodule add git://github.com/scrooloose/nerdtree.git nerdtree
 
-echo "----Install taglist"
-git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
+#echo "----Install taglist"
+#git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
 
 echo "----Install jsbeatify"
 git submodule add git://github.com/maksimr/vim-jsbeautify.git jsbeautify
+
+echo "----Instal solorized color"
+git submodule add  git://github.com/altercation/vim-colors-solarized.git solarized
+
+echo "----Instal close tag"
+git submodule add git://github.com/docunext/closetag.vim.git closetag
+
+echo "----Instal supertab"
+git submodule add git://github.com/ervandew/supertab.git supertab
+
+echo "----Instal tagbar"
+git submodule add git://github.com/majutsushi/tagbar.git tagbar
+
+echo "----Instal nerdcommenter"
+git submodule add git://github.com/scrooloose/nerdcommenter.git nerdcommenter
+
+#echo "----Instal pyflakes"
+#git submodule add git://github.com/kevinw/pyflakes-vim.git pyflakes
 
 cd $ROOT_DIR
 git submodule update --init --recursive

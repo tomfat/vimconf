@@ -50,12 +50,24 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 set showtabline=2
+
+"Set search ignore case
 set ignorecase
 set smartcase
+
+"Set indent
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+"Set font for gvim
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 
 "Set windows size
 if has("gui_running")
@@ -64,11 +76,15 @@ if has("gui_running")
   set lines=999 columns=999
 endif
 
+"----------------------------
+"Configure plug-ins
+"----------------------------
+
 "Configure tag list
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window   = 1
-let Tlist_WinWidth = 40
+"nnoremap <silent> <F8> :TlistToggle<CR>
+"let Tlist_Close_On_Select = 1
+"let Tlist_Use_Right_Window   = 1
+"let Tlist_WinWidth = 40
 
 "Configure NERDTree
 map <F2> :NERDTreeToggle<CR>
@@ -85,6 +101,17 @@ let delimitMate_quotes = "\" ' ` *"
 "Configure Js beautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html  noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType css  noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"Configure Close Tag
+autocmd FileType html, htmldjango, jinjahtml, eruby, mako let b:closetag_html_style=1
+autocmd FileType html, xhtml, xml, htmldjango, jinjahtml, eruby, mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+"Configure tagbar
+let g:tagbar_usearrows = 1
+nnoremap <silent> <F12> :TagbarToggle<CR>
+
+"Configure nerdcommenter
+

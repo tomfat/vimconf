@@ -30,8 +30,8 @@ git submodule add git://github.com/vim-scripts/desert.vim.git desert
 echo "----Install nerdtree"
 git submodule add git://github.com/scrooloose/nerdtree.git nerdtree
 
-echo "----Install taglist"
-git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
+REM echo "----Install taglist"
+REM git submodule add git://github.com/vim-scripts/taglist.vim.git targlist
 
 echo "----Install jsbeautify"
 git submodule add git://github.com/maksimr/vim-jsbeautify.git jsbeautify
@@ -51,8 +51,8 @@ git submodule add git://github.com/majutsushi/tagbar.git tagbar
 echo "----Instal nerdcommenter"
 git submodule add git://github.com/scrooloose/nerdcommenter.git nerdcommenter
 
-echo "----Instal pyflakes"
-git submodule add git://github.com/kevinw/pyflakes-vim.git pyflakes
+REM echo "----Instal pyflakes"
+REM git submodule add git://github.com/kevinw/pyflakes-vim.git pyflakes
 
 REM return to ROOT_DIR
 popd

@@ -34,3 +34,6 @@
 [submodule "bundle/pyflakes"]
 	path = bundle/pyflakes
 	url = git://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/linediff"]
+	path = bundle/linediff
+	url = https://github.com/vim-scripts/linediff.vim.git

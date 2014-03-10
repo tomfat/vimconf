@@ -51,6 +51,9 @@ git submodule add git://github.com/majutsushi/tagbar.git tagbar
 echo "----Instal nerdcommenter"
 git submodule add git://github.com/scrooloose/nerdcommenter.git nerdcommenter
 
+echo "----Install linediff"
+git submodule add https://github.com/vim-scripts/linediff.vim.git linediff
+
 REM echo "----Instal pyflakes"
 REM git submodule add git://github.com/kevinw/pyflakes-vim.git pyflakes
 

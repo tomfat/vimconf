@@ -126,3 +126,5 @@ nnoremap <silent> <F12> :TagbarToggle<CR>
 
 "Configure nerdcommenter
 
+"Configure mouse
+set mouse-=a

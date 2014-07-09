@@ -32,15 +32,26 @@ endfunction
 call pathogen#infect()
 call pathogen#helptags()
 
+if &term =~ "xterm"
+ set t_Co=256
+ if has("terminfo")
+   let &t_Sf=nr2char(27).'[3%p1%dm'
+   let &t_Sb=nr2char(27).'[4%p1%dm'
+ else
+   let &t_Sf=nr2char(27).'[3%dm'
+   let &t_Sb=nr2char(27).'[4%dm'
+ endif
+endif
+
 "colorscheme desert
-if has("gui_running")
+"if has("gui_running")
     set background=dark
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
     let g:solarized_contrast="high"
     let g:solarized_visibility="high"
     colorscheme solarized
-endif
+"endif
 
 set nu
 set nobackup
@@ -90,7 +101,8 @@ endif
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeWinSize=40
-autocmd VimEnter * NERDTree
+:let NERDTreeIgnore = ['\.o$','\.ko$']
+"autocmd VimEnter * NERDTree
 
 "Configure DelimitMate
 let delimitMate_autoclose = 1
@@ -115,3 +127,5 @@ nnoremap <silent> <F12> :TagbarToggle<CR>
 
 "Configure nerdcommenter
 
+"Configure mouse
+set mouse-=a

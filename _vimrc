@@ -101,6 +101,7 @@ endif
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeWinSize=40
+:let NERDTreeIgnore = ['\.o$','\.ko$']
 autocmd VimEnter * NERDTree
 
 "Configure DelimitMate

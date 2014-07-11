@@ -66,11 +66,11 @@ set showtabline=2
 set ignorecase
 set smartcase
 
-"Set indent
+"Set indent for linux kernel c coding style
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=8
+set shiftwidth=8
+"set expandtab
 
 "Set font for gvim
 if has("gui_running")
@@ -101,6 +101,8 @@ endif
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeWinSize=40
+
+"Ignore kernel build output
 :let NERDTreeIgnore = ['\.o$','\.ko$']
 "autocmd VimEnter * NERDTree
 

@@ -4,7 +4,7 @@ REM Switch to root folder
 pushd %~dp0..
 set ROOT_DIR=%CD%
 set BIN_DIR=%CD%\bin
-set VIM_DIR=%HOMEPATH%
+set VIM_DIR=c:\%HOMEPATH%
 REM set VIM_DIR=%CD%\test
 REM in windows vim plugin are placed under vimfiles folder
 set VIM_FILES=%VIM_DIR%\vimfiles
